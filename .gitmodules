@@ -4,3 +4,6 @@
 [submodule "CMS/Televisieadmin"]
 	path = CMS/Televisieadmin
 	url = git://github.com/Kinkrsoftware/Televisieadmin.git
+[submodule "Playout/SimpleSMIL"]
+	path = Playout/SimpleSMIL
+	url = git://github.com/Kinkrsoftware/SimpleSMIL
