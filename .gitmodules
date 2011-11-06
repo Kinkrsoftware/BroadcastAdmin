@@ -1,0 +1,6 @@
+[submodule "CMS/Kabelkrantadmin"]
+	path = CMS/Kabelkrantadmin
+	url = git://github.com/Kinkrsoftware/Kabelkrantadmin.git
+[submodule "CMS/Televisieadmin"]
+	path = CMS/Televisieadmin
+	url = git://github.com/Kinkrsoftware/Televisieadmin.git
