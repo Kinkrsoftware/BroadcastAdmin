@@ -1,0 +1,28 @@
+# Effectively removes the cursor
+xsetroot -cursor emptyCursor.xbm emptyCursor.xbm
+
+# Hides the cursor after 1 second idle time
+# unclutter -root -idle 1 &
+
+# Changes the background into a blue
+xsetroot -solid "#063b71"
+
+# Allows all programs from localhost to connect to the running X server
+xhost +127.0.0.1
+
+# Prevents the screenblanking to turn on
+xset s off
+
+# Prevents the monitor to go off
+xset -dpms
+
+# Launches an VNC server so you can always view what is on screen
+# Use ssh -L 5900:127.0.0.1:5900 as portforwarding
+/usr/bin/x11vnc -display :0 -bg -viewonly -forever  -passwd yourpassword
+
+# When using an nVidiacard setting overscan makes the picture to fill up the entire screen.
+nvidia-settings --assign TVOverScan=20
+#nvidia-settings --assign TVOverScan=25
+
+# Launches our wrapper script that automatically restarts the carrousel.
+/home/tv/wrapper.sh
