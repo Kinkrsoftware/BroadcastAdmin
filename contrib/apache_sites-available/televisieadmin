@@ -1,0 +1,28 @@
+<VirtualHost *:909>
+	ServerAdmin webmaster@localhost
+
+	DocumentRoot /var/www/televisieadmin/htdocs
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+        <Location />
+            AuthName 'tvadmin.midvliet.com'
+
+            AuthType Digest
+            AuthDigestProvider file
+            AuthDigestDomain /
+            AuthUserFile /var/www/televisieadmin/htdocs/.htdigest
+
+            Require valid-user
+        </Location>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
